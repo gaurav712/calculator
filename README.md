@@ -2,6 +2,8 @@
 
 A minimal calculator application that displays a fullscreen overlay with a centered text input. As you type, the input is piped to `bc` and results are displayed below the input.
 
+![Sample](sample.png)
+
 ## Requirements
 
 - GTK4
