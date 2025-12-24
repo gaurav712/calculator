@@ -2,7 +2,7 @@
 #define CONFIG_H
 
 #define OVERLAY_BACKGROUND_COLOR "#1d2021"
-#define OVERLAY_OPACITY 0.7
+#define OVERLAY_OPACITY 0.85
 
 #define INPUT_FONT "monospace"
 #define INPUT_FONT_SIZE 24
