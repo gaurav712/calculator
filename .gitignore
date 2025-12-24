@@ -1,0 +1,8 @@
+.cache/
+
+.DS_Store
+.vscode/
+
+compile_commands.json
+
+calculator
