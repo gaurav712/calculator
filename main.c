@@ -71,7 +71,7 @@ static gchar *calculate_result(const char *input) {
     return NULL;
 
   char command[1024];
-  snprintf(command, sizeof(command), "echo '%s' | bc 2>/dev/null", input);
+  snprintf(command, sizeof(command), "echo 'scale=3; %s' | bc -l 2>/dev/null | awk '{printf \"%%g\\n\", $0}'", input);
 
   FILE *fp = popen(command, "r");
   if (fp == NULL)
