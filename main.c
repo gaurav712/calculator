@@ -71,7 +71,10 @@ static gchar *calculate_result(const char *input) {
     return NULL;
 
   char command[1024];
-  snprintf(command, sizeof(command), "echo 'scale=3; %s' | bc -l 2>/dev/null | awk '{printf \"%%g\\n\", $0}'", input);
+  snprintf(
+      command, sizeof(command),
+      "echo 'scale=3; %s' | bc -l 2>/dev/null | awk '{printf \"%%g\\n\", $0}'",
+      input);
 
   FILE *fp = popen(command, "r");
   if (fp == NULL)
@@ -288,6 +291,7 @@ static void activate(GtkApplication *app, gpointer user_data G_GNUC_UNUSED) {
       "  background-color: rgba(0, 0, 0, 0.3);"
       "  border: %dpx solid %s;"
       "  border-radius: %dpx;"
+      "  padding: 0 %dpx;"
       "}"
       ".input-entry:focus { @include entry(normal); }"
       ".result-label {"
@@ -297,7 +301,8 @@ static void activate(GtkApplication *app, gpointer user_data G_GNUC_UNUSED) {
       "}",
       bg_r, bg_g, bg_b, OVERLAY_OPACITY, INPUT_FONT, INPUT_FONT_SIZE, input_r,
       input_g, input_b, INPUT_BORDER_WIDTH, border_color, INPUT_BORDER_RADIUS,
-      RESULT_FONT, RESULT_FONT_SIZE, result_r, result_g, result_b);
+      INPUT_PADDING_HORIZONTAL, RESULT_FONT, RESULT_FONT_SIZE, result_r,
+      result_g, result_b);
 
   g_free(border_color);
 

@@ -13,6 +13,7 @@
 #define INPUT_BORDER_WIDTH 2
 #define INPUT_BORDER_COLOR "#ebdbb2"
 #define INPUT_BORDER_OPACITY 1.0
+#define INPUT_PADDING_HORIZONTAL 20
 
 #define RESULT_FONT "monospace"
 #define RESULT_FONT_SIZE 48
