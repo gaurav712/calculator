@@ -13,6 +13,9 @@ $(TARGET): $(SOURCE)
 install: $(TARGET)
 	cp $(TARGET) /usr/local/bin/
 
+uninstall:
+	rm /usr/local/bin/$(TARGET)
+
 clean:
 	rm -f $(TARGET)
 
