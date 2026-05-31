@@ -1,3 +1,5 @@
+> **Note:** This project is moved to Codeberg: https://codeberg.org/gaurav712/calculator
+
 # calculator
 
 Vibe coded! Expect issues
@@ -33,4 +35,3 @@ To clean up build artifacts:
 ```sh
 make clean
 ```
-
